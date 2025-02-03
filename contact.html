@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='contact_bg.jpg') }}");
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat; /* Prevent image tiling */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-end; /* Align container to the right */
+            align-items: center; /* Vertically center the container */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            margin: 0; /* Remove default margins */
+            padding-right: 20px; /* Add right padding for spacing */
+        }
+
+        .container {
+            background-color: rgba(128, 128, 128, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center text within the container */
+            display: flex;
+            flex-direction: column; /* Arrange content vertically */
+            align-items: center; /* Center content horizontally */
+        }
+
+        /* Style links */
+        a {
+            color: white; /* Or a color that contrasts well with the background */
+            text-decoration: none; /* Remove underlines from links */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Developer: Amanuel Mihiret</p>
+        <p>Email: zeaman44@gmail.com</p>
+        <p>Institutional-email: amanmih@dtu.edu.et</p>
+        <p>GitHub: <a href="https://github.com/Zeaman" target="_blank">github.com/zeaman</a></p> <p>Upwork: <a href="https://www.upwork.com/freelancers/~018267dd30abf9c4db" target="_blank">upwork.com/amanuel</a></p>
+        <br>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Classification</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg_two.jpg') }}");
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: rgba(128, 128, 128, 0.8);
+            /*background: white;*/
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        img {
+            max-width: 300px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button, input[type="submit"] {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover, input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Upload and Predict</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload">
+        </form>
+
+        {% if image_path %}
+            <img src="{{ image_path }}" alt="Uploaded Image">
+            <form action="/predict" method="post">
+                <input type="hidden" name="image_path" value="{{ image_path }}">
+                <button type="submit">Predict</button>
+            </form>
+        {% endif %}
+
+        {% if prediction %}
+            <h3>{{ prediction }}</h3>
+        {% endif %}
+    </div>
+
+    <br>
+    <a href="/contact" style="font-family: 'Arial', sans-serif; font-size: 18px; color: blue; font-weight: bold;">Contact Us</a>
+</body>
+</html>
