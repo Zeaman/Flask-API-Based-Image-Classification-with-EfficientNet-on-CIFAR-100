@@ -11,10 +11,13 @@ A Flask-based web application that allows users to upload images and classify th
 
 ## 📸 Screenshots
 🏠 Home Page
+
 <img src="photo_1_2025-02-03_22-02-32.jpg" width="600">
 🔍 Prediction Output
+
 <img src="photo_6_2025-02-03_22-02-32.jpg" width="600">
 📞 Contact Page
+
 <img src="photo_10_2025-02-03_22-02-32.jpg" width="600">
 
 ## 📂 Project Structure:
