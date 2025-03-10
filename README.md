@@ -26,14 +26,23 @@ A Flask-based web application that allows users to upload images and classify th
 
 cifar100-image-classification/
 │── static/
+
 │   ├── uploads/         # Stores uploaded images
+
 │   ├── bg_two.jpg       # Background image (if used)
+
 │── templates/
+
 │   ├── index.html       # Main UI page
+
 │   ├── contact.html     # Contact page
+
 │── app.py               # Flask backend (handles image upload & classification)
+
 │── efficientnet_cifar100.pth  # Trained model weights
+
 │── requirements.txt      # Dependencies
+
 │── README.md             # Project documentation
 
 ## ⚙️ Setup & Installation
